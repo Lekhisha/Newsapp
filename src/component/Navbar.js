@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import {Link} from "react-router-dom";
 export class Navbar extends Component {
   render() {
-    const{mode,togglebtn}=this.props
+   /* const{mode,togglebtn}=this.props*/
     return (
       <div>
-        <nav className={`navbar navbar-expand-lg ${mode==='light'?'bg-light':'bg-dark'}`}>
+        <nav className={`navbar navbar-expand-lg`}>
             <div className="container-fluid">
             <Link className="navbar-brand"to="/">NewsMonkey</Link>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -30,9 +30,9 @@ export class Navbar extends Component {
              <li className="Nav-item"><Link className="nav-link"to="/sports">Sports</Link></li>
              <li className="Nav-item"><Link className="nav-link"to="/technology">Technology</Link></li>
             </ul>
-            <div class="form-check form-switch">
-                <input class="form-check-input" onClick={togglebtn} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                <label class="form-check-label" htmlfor="flexSwitchCheckDefault">dark/light mode</label>
+            <div className="form-check form-switch">
+                <input className="form-check-input" /*onClick={togglebtn} */type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">dark/light mode</label>
             </div>
         </div>
        </div>
